@@ -43,7 +43,9 @@
         <button type="submit">남기기</button>
       </form>
     </div>
-
+    <div class="card">
+	<p style="font-weight: bold; color: var(--brand);">✨ V2 방명록에 오신 것을 환영합니다! 자유롭게 방명록을 남겨주세요.</p>
+	<form action="/add" method="post">
     <div class="card">
       {% if entries %}
         {% for e in entries %}
@@ -51,7 +53,7 @@
             <span class="who">{{ e.name }}</span>
             <span class="when">{{ e.time }}</span>
             <div>{{ e.message }}</div>
-          </div>
+          </div>	
         {% endfor %}
       {% else %}
         <div class="empty">첫 글의 주인공이 되어주세요!</div>
@@ -60,3 +62,4 @@
   </div>
 </body>
 </html>
+
